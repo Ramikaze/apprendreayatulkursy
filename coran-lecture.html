@@ -252,6 +252,28 @@ body:not(.show-ar):not(.show-fr) .bismillah { display: none !important; }
 
 
 </style>
+<link rel="stylesheet" href="ios-theme.css">
+<style>
+/* ===== iOS deep pass — coran-lecture ===== */
+.hdr{background:rgba(10,15,28,0.72)!important;backdrop-filter:saturate(180%) blur(20px)!important;-webkit-backdrop-filter:saturate(180%) blur(20px)!important;border-bottom-color:rgba(255,255,255,0.09)!important;padding-top:calc(12px + env(safe-area-inset-top))!important}
+[data-theme="light"] .hdr{background:rgba(240,235,225,0.72)!important;border-bottom-color:rgba(60,45,20,0.1)!important}
+.sel,.list-reciter select,.reciter-sel{border-radius:10px!important;font-family:var(--ios-font)!important;background:rgba(255,255,255,0.06)!important;border-color:transparent!important}
+[data-theme="light"] .sel,[data-theme="light"] .list-reciter select{background:rgba(60,45,20,0.06)!important;border-color:transparent!important}
+.btn-go,.nav-btn,.pdf-card-dl{font-family:var(--ios-font)!important;border-radius:980px!important;font-weight:600!important;letter-spacing:0!important;transition:transform .28s var(--ios-ease),background .2s,border-color .2s!important}
+.btn-go:active,.nav-btn:active,.pdf-card-dl:active{transform:scale(.96)!important}
+.list-search{border-radius:12px!important;background:rgba(255,255,255,0.06)!important;border-color:transparent!important}
+[data-theme="light"] .list-search{background:rgba(60,45,20,0.06)!important;border-color:transparent!important}
+.list-search input{font-family:var(--ios-font)!important}
+.surah-card{border-radius:16px!important;transition:transform .4s var(--ios-ease-out),background .2s,border-color .2s!important}
+.surah-card:hover{transform:none!important}
+.surah-card:active{transform:scale(.97)!important}
+.surah-num{border-radius:12px!important}
+.font-ctrl .fc-grp{border-radius:980px!important}
+.font-ctrl .fc-btn,.font-ctrl .fc-select{font-family:var(--ios-font)!important}
+.verse:target,.verse.highlight{border-left:none!important;padding-left:20px!important;background:rgba(201,168,76,0.1)!important}
+.pdf-card{border-radius:18px!important}
+.pdf-card-icon{border-radius:14px!important}
+</style>
 </head>
 <body class="show-ar show-fr">
 <!-- Word tooltip -->

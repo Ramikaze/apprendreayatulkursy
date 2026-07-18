@@ -65,6 +65,14 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   .video-info{padding:14px 16px}
 }
 </style>
+<link rel="stylesheet" href="ios-theme.css">
+<style>
+/* ===== iOS deep pass — videos ===== */
+.video-card{border-radius:18px!important}
+.play-btn{transition:transform .2s var(--ios-ease),background .2s!important}
+.play-btn:hover{transform:translate(-50%,-50%)!important}
+.play-btn:active{transform:translate(-50%,-50%) scale(.92)!important}
+</style>
 </head>
 <body>
 <div class="wrap">

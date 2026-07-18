@@ -116,6 +116,18 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 [data-theme="light"] ::-webkit-scrollbar-track{background:var(--lbg)!important}
 [data-theme="light"] ::-webkit-scrollbar-thumb{background:rgba(122,92,36,0.25)!important}
 </style>
+<link rel="stylesheet" href="ios-theme.css">
+<style>
+/* ===== iOS deep pass — resister ===== */
+.a-card{border-radius:16px!important;transition:transform .4s var(--ios-ease-out),background .2s,border-color .2s!important}
+.a-card:hover{transform:none!important}
+.a-card:not(.soon):active{transform:scale(.98)!important}
+.evidence{border-left:none!important;border-radius:14px!important}
+.article-toc-item{border-left:none!important}
+.intro-box,.action-box,.sources-box,.article-toc{border-radius:16px!important}
+.back-btn{border-radius:980px!important;transition:transform .28s var(--ios-ease),background .2s,border-color .2s!important}
+.back-btn:active{transform:scale(.96)!important}
+</style>
 </head>
 <body>
 <div class="wrap">

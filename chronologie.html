@@ -874,6 +874,14 @@ html[data-theme="light"] ::-webkit-scrollbar-track { background: #e8e0d4 !import
 html[data-theme="light"] ::-webkit-scrollbar-thumb { background: rgba(122,92,36,0.25) !important; }
 </style>
 
+<link rel="stylesheet" href="ios-theme.css">
+<style>
+/* ===== iOS deep pass — chronologie ===== */
+:root{--radius:12px!important;--radius-lg:18px!important}
+.nav,.tabs,.topbar,.toolbar{backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px)}
+.tab,.nav-item,.pill,.chip{transition:transform .28s var(--ios-ease),background .2s,color .2s!important}
+.tab:active,.nav-item:active,.pill:active,.chip:active{transform:scale(.96)!important}
+</style>
 </head>
 <body>
 

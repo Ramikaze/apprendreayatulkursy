@@ -351,6 +351,16 @@ body::before{content:'';position:fixed;inset:0;
   .verse-block{padding:14px 14px}
 }
 </style>
+<link rel="stylesheet" href="ios-theme.css">
+<style>
+/* ===== iOS deep pass — verset-trone ===== */
+.verse-translation{border-left:none!important;border-radius:12px!important}
+#global-player{background:rgba(10,15,28,0.72)!important;backdrop-filter:saturate(180%) blur(20px)!important;-webkit-backdrop-filter:saturate(180%) blur(20px)!important;padding-top:calc(8px + env(safe-area-inset-top))!important}
+.ab-btn,.tt-audio{transition:transform .28s var(--ios-ease),background .2s,box-shadow .2s!important}
+.ab-btn:hover,.tt-audio:hover{transform:none!important}
+.ab-btn:active,.tt-audio:active{transform:scale(.9)!important}
+#tooltip{border-radius:16px!important}
+</style>
 </head>
 <body>
 <div id="app">

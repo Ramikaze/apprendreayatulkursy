@@ -97,6 +97,18 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   .detail-num{font-size:3rem}
 }
 </style>
+<link rel="stylesheet" href="ios-theme.css">
+<style>
+/* ===== iOS deep pass — douze-imams ===== */
+.imam-card{border-radius:18px!important;transition:transform .4s var(--ios-ease-out),background .2s,border-color .2s,box-shadow .3s!important}
+.imam-card:hover{transform:none!important}
+.imam-card:active{transform:scale(.97)!important}
+.imam-arrow{transition:color .2s,transform .3s var(--ios-ease),background .2s!important}
+.imam-card:hover .imam-arrow{background:transparent!important;color:#c9a84c!important;transform:translateX(2px)!important}
+.detail-back,.detail-nav-btn{border-radius:980px!important;font-family:var(--ios-font)!important;transition:transform .28s var(--ios-ease),background .2s,border-color .2s!important}
+.detail-back:active,.detail-nav-btn:active{transform:scale(.96)!important}
+.info-box{border-radius:14px!important}
+</style>
 </head>
 <body>
 <div class="wrap">

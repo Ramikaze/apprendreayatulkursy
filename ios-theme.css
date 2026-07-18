@@ -1,0 +1,74 @@
+/* ======================================================================
+   ios-theme.css — iOS / iPadOS interaction & material layer
+   Shared across all content pages. Linked AFTER each page's own <style>
+   so these rules win. Deliberately COLOR-AGNOSTIC: it only touches
+   typography of controls, radii, materials, motion and touch ergonomics —
+   never background/text colors — so it never fights a page's own
+   light/dark theming.
+   ====================================================================== */
+
+:root{
+  --ios-ease:cubic-bezier(.32,.72,0,1);        /* iOS spring-like */
+  --ios-ease-out:cubic-bezier(.22,1,.36,1);    /* ease-out-quint  */
+  --ios-font:-apple-system,BlinkMacSystemFont,'SF Pro Text','SF Pro Display','Segoe UI',system-ui,'Plus Jakarta Sans',sans-serif;
+}
+
+/* ---- Rendering & touch ergonomics (safe everywhere) ---- */
+html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+body{
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+}
+*{ -webkit-tap-highlight-color:transparent; }
+::selection{ background:rgba(201,168,76,0.28); }
+
+/* Momentum scroll + slim iOS scrollbars */
+::-webkit-scrollbar{ width:6px; height:6px; }
+::-webkit-scrollbar-thumb{ border-radius:6px; }
+
+/* ---- Controls read as iOS: San Francisco, spring press ----
+   Font is applied to interactive controls only; long-form prose keeps
+   its own (serif) reading face — the Apple Books convention. */
+button, .btn, [role="button"], input, textarea, select,
+.nav-tab, .tab, .toc-link, .toc-item, .chip, .pill, .tag{
+  font-family:var(--ios-font);
+}
+button, .btn, [role="button"]{
+  transition:transform .28s var(--ios-ease), background-color .2s ease,
+             border-color .2s ease, opacity .2s ease, box-shadow .2s ease;
+}
+button:active, .btn:active, [role="button"]:active{ transform:scale(.96); }
+button:disabled, .btn:disabled, [role="button"][aria-disabled="true"]{ transform:none; }
+
+/* Interactive list rows / table-of-contents → iOS press feedback */
+.toc-item{ border-radius:10px; transition:transform .25s var(--ios-ease), color .2s ease, background-color .2s ease; }
+.toc-item:active{ transform:scale(.985); }
+
+/* ---- Continuous-corner radii on shared card/callout blocks ---- */
+.toc, .quran, .sources, .synthesis-item, .card, .box, .callout{
+  border-radius:16px !important;
+}
+
+/* ---- Kill accent side-stripes (design ban) on known callout blocks ----
+   Convert a thick colored left border to a hairline; keep the block. */
+.pillar-box, .hadith, .callout, .note, .quote-box, .info-box{
+  border-left-width:1px !important;
+}
+
+/* ---- Accessible, on-brand focus ring (many pages strip outlines) ---- */
+:focus-visible{
+  outline:2px solid rgba(201,168,76,0.65);
+  outline-offset:2px;
+}
+button:focus:not(:focus-visible){ outline:none; }
+
+/* ---- Honour Reduce Motion across every page ---- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
+  }
+}
